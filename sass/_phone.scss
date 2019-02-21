@@ -1,3 +1,35 @@
-﻿h1{
-        color:red;
-    }
+﻿html{
+    -webkit-text-size-adjust:none;
+}
+
+*{
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+body{
+    font-size:16px;
+}
+
+.social{
+    float:right;
+    padding-top:.5em;
+    z-index:99;
+}
+.social li a{
+    display:block;
+    padding-left:10px;
+}
+nav{
+    position:absolute;
+    top:0;
+    left:0;
+    height:44px;
+    width:100%;
+}
+
+.clearfix:after{
+    content:" ";
+    display:table;
+    clear:both;
+}
