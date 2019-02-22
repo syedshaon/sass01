@@ -1,4 +1,6 @@
-﻿html{
+﻿
+@import "variables";
+html{
     -webkit-text-size-adjust:none;
 }
 
@@ -7,9 +9,34 @@
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
 }
+
+.clearfix:after{
+    content:" ";
+    display:table;
+    clear:both;
+}
+
+
 body{
     font-size:16px;
 }
+/*Header Starts Here*/
+header{
+    padding:1em $gutter .5em $gutter;
+    border:solid 1px $ltgrey;
+    h1,h2{
+        display:none;
+    }
+    .logo{
+        float:left;
+    }
+    .logo img{
+        width:200px;
+    }
+
+}
+
+/*Header Ends Here*/
 
 .social{
     float:right;
@@ -24,12 +51,22 @@ nav{
     position:absolute;
     top:0;
     left:0;
-    height:44px;
+    height:50px;
     width:100%;
+    background-color:$menu-color;
+    box-shadow: 0 1px 2px rgba(0,0,0,.6);
 }
 
-.clearfix:after{
-    content:" ";
-    display:table;
+/*footer */
+footer{
     clear:both;
+    font-size:.8em;
+    text-align:center;
+    padding:2em 0 .6em 0;
+    color:$brown;
+    font-weight:$heavy;
+    a{
+        color:$brown;
+    }
+
 }

@@ -1,10 +1,48 @@
-﻿header, nav, main, footer{
-    max-width:1028px;
+﻿
+
+@import "variables";
+
+header, nav, main, footer {
+    max-width: 1028px;
     margin: 0 auto;
 }
 
-header{
-    position:relative;
+header {
+    position: relative;
     padding-top: 2em;
     padding-bottom: 1em;
+    border:none; /*Different velue in phone SCSS %%%%% */
+}
+
+/*Navigation*/
+
+nav {
+    position: relative;
+    background-color: transparent;
+    clear: right;
+    padding-top: .6em;
+    box-shadow: none; /*Different velue in phone SCSS %%%%% */
+
+    ul {
+        float: right;
+        width: auto;
+    }
+    /*main menu items float by side*/
+    ul li {
+        float: left;
+    }
+
+    ul li a {
+        display: block;
+        color: $menu-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-top: solid 2px rgba(0,0,0,0.1);
+        font-size: .9em;
+        padding: .7em .9em;
+        /*transition*/
+        transition: background 0.3s linear;
+    }
+    ul li a:hover{ background-color:rgba(0,0,0,0.1); }
+    ul li.active a{border-top: solid 3px $menu-color;}
 }
