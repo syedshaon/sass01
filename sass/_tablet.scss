@@ -1,10 +1,18 @@
-﻿
-@import "variables";
-header .logo img{
-    width:auto;
+﻿@import "variables";
+
+header .logo img {
+    width: auto;
 }
 
-header .social{
-    position:relative;
-    float:right;
+header .social {
+    position: relative;
+    float: right;
+}
+
+// Columns
+main {
+    .width6 {
+        float: left;
+        width: 50%;
+    }
 }

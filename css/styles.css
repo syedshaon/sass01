@@ -88,7 +88,8 @@ header {
   border: solid 1px #f0f0f3;
 }
 
-header h1, header h2 {
+header h1,
+header h2 {
   display: none;
 }
 
@@ -137,6 +138,57 @@ footer a {
   color: #a47027;
 }
 
+main {
+  display: block;
+  min-height: 25em;
+}
+
+main h1 {
+  font-size: 3em;
+  color: #a47027;
+  padding-top: .75em;
+  font-weight: 700;
+}
+
+main h2 {
+  font-size: 2em;
+  color: #ecbc4d;
+  padding-top: .5em;
+  font-weight: 700;
+}
+
+main h3 {
+  font-size: 1.5em;
+  color: #a8c6ef;
+  padding-top: .5em;
+  font-weight: 700;
+}
+
+main p {
+  font-size: 1em;
+  color: #858585;
+  padding-top: .4em;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+main strong {
+  font-weight: 700;
+}
+
+main a {
+  color: #a47027;
+}
+
+main {
+  padding: 0 2%;
+}
+
+main .row {
+  width: 100%;
+  clear: both;
+}
+
 @media only screen and (min-width: 45em) {
   /*SCSS Color*/
   /*Font Family*/
@@ -147,6 +199,10 @@ footer a {
   header .social {
     position: relative;
     float: right;
+  }
+  main .width6 {
+    float: left;
+    width: 50%;
   }
 }
 

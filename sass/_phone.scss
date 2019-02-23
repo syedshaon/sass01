@@ -1,72 +1,136 @@
-﻿
-@import "variables";
-html{
-    -webkit-text-size-adjust:none;
-}
-
-*{
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-}
-
-.clearfix:after{
-    content:" ";
-    display:table;
-    clear:both;
-}
+﻿@import "variables";
 
 
-body{
-    font-size:16px;
+html {
+    -webkit-text-size-adjust: none;
 }
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+// vv
+
+body {
+    font-size: 16px;
+}
+
 /*Header Starts Here*/
-header{
-    padding:1em $gutter .5em $gutter;
-    border:solid 1px $ltgrey;
-    h1,h2{
-        display:none;
+header {
+    padding: 1em $gutter .5em $gutter;
+    border: solid 1px $ltgrey;
+
+    h1,
+    h2 {
+        display: none;
     }
-    .logo{
-        float:left;
+
+    .logo {
+        float: left;
     }
-    .logo img{
-        width:200px;
+
+    .logo img {
+        width: 200px;
     }
 
 }
 
 /*Header Ends Here*/
 
-.social{
-    float:right;
-    padding-top:.5em;
-    z-index:99;
+.social {
+    float: right;
+    padding-top: .5em;
+    z-index: 99;
 }
-.social li a{
-    display:block;
-    padding-left:10px;
+
+.social li a {
+    display: block;
+    padding-left: 10px;
 }
-nav{
-    position:absolute;
-    top:0;
-    left:0;
-    height:50px;
-    width:100%;
-    background-color:$menu-color;
-    box-shadow: 0 1px 2px rgba(0,0,0,.6);
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: $menu-color;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 
 /*footer */
-footer{
-    clear:both;
-    font-size:.8em;
-    text-align:center;
-    padding:2em 0 .6em 0;
-    color:$brown;
-    font-weight:$heavy;
-    a{
-        color:$brown;
+footer {
+    clear: both;
+    font-size: .8em;
+    text-align: center;
+    padding: 2em 0 .6em 0;
+    color: $brown;
+    font-weight: $heavy;
+
+    a {
+        color: $brown;
     }
 
+}
+
+// // // Main Area
+
+main {
+    display: block;
+    min-height: 25em;
+
+    h1 {
+        font-size: 3em;
+        color: $h1_color;
+        padding-top: .75em;
+        font-weight: $heavy;
+    }
+
+    h2 {
+        font-size: 2em;
+        color: $h2-color;
+        padding-top: .5em;
+        font-weight: $heavy;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        color: $h3_color;
+        padding-top: .5em;
+        font-weight: $heavy;
+    }
+
+    p {
+        font-size: 1em;
+        color: $text-color;
+        padding-top: .4em;
+        font-weight: $normal;
+        line-height: 130%;
+    }
+
+    strong {
+        font-weight: $heavy;
+    }
+
+    a {
+        color: $link-color;
+    }
+}
+
+// main area's padding for mobile
+main {
+    .row {
+        width: 100%;
+        clear: both;
+    }
+
+    padding: 0 $gutter;
 }
