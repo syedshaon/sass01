@@ -99,6 +99,7 @@ main {
         color: $h2-color;
         padding-top: .5em;
         font-weight: $heavy;
+        clear: both;
     }
 
     h3 {
@@ -133,4 +134,88 @@ main {
     }
 
     padding: 0 $gutter;
+}
+
+// Sub Nav
+%subnav {
+    display: block;
+    float: left;
+    width: 25%;
+    margin: 2em 0 0 0;
+    padding: .5em 1em .2em 1em;
+    color: $darkgrey;
+    border: solid 1px $orange;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    transition: background ease .5s;
+}
+
+.subnav-link {
+    @extend %subnav;
+    background-color: $ltgrey;
+}
+
+.subnav-link:hover {
+    background-color: $orange;
+}
+
+.subnav-active {
+    @extend %subnav;
+    background-color: $blue;
+    font-weight: $heavy;
+    color: #111;
+}
+
+.hideSmall {
+    display: none;
+}
+
+
+// // // // // lists
+
+@mixin a_list() {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: .5em 0 .5em 1.5em;
+    margin-left: 1em;
+}
+
+ul.list-check-yes li {
+    background-image: url(../images/check1.png);
+    @include a_list();
+}
+
+ul.list-check-no li {
+
+    background-image: url(../images/check2.png);
+    @include a_list();
+}
+
+ul.list-check-yes,
+ul.list-check-no {
+    padding-top: .5em;
+}
+
+
+// Columns
+
+@for $i from 1 through 12 {
+    $w: ($i/12);
+
+    .small-#{$i} {
+        width: $w*100%;
+        padding-left: $gutter*1.5;
+        float: left;
+    }
+}
+
+
+
+// imgaes
+
+img.triangle {
+    float: left;
+    shape-outside: polygon(0 0, 100% 0, 0 100%);
+    -webkit-shape-outside: polygon(0 0, 100% 0, 0 100%);
+    margin: 10px 20px 20px 0;
 }

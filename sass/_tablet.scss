@@ -16,3 +16,28 @@ main {
         width: 50%;
     }
 }
+
+
+// // // // // sub Nav
+
+.hideSmall {
+    display: inline;
+}
+
+// // // // // NewsPaper Style coluns
+
+.multicol {
+    @include columns(2, $darkgrey);
+}
+
+
+// Columns
+
+@for $i from 1 through 12 {
+    $w: ($i/12);
+
+    .large-#{$i} {
+        width: $w*100%;
+        float: left;
+    }
+}
